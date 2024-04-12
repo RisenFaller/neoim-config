@@ -11,12 +11,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("vim-options")
+
+require("options")
 require("lazy").setup("plugins")
 
+-- for vim plugins
+local Plug = vim.fn['plug#']
+vim.call('plug#begin')
 
+Plug 'easymotion/vim-easymotion'
 
+vim.call('plug#end')
 
-
-
-
+-- reloading
+vim.api.nvim_input(":PlugInstall<CR>q")
