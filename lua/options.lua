@@ -4,7 +4,6 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number relativenumber")
 vim.cmd("set clipboard+=unnamedplus")
-vim.cmd("set foldmethod=indent")
 
 change_detection = { notify = false }
 
