@@ -26,10 +26,21 @@ return {
 			lspconfig.pyright.setup({
         capabilities = capabilities
       })
+      lspconfig.gdscript.setup({
+        capabilities = capabilities
+      })
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities
+      })
 
-			vim.keymap.set("n", "<leader>i", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<C-b>", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+      -- SHOW INFO
+			vim.keymap.set("n", SHOW_INFO, vim.lsp.buf.hover, {})
+
+      -- GO TO DEFINITION
+			vim.keymap.set("n", GO_TO_DEFENITION, vim.lsp.buf.definition, {})
+
+      -- SHOW ACTION
+			vim.keymap.set("n", SHOW_ACTION, vim.lsp.buf.code_action, {})
 		end,
 	},
 }
