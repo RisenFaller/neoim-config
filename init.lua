@@ -11,13 +11,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("options")
-require("keymaps")
+require("options.config")
+require("options.keymaps")
+
+require("options.godot")
+
 require("lazy").setup("plugins")
 
 
-
-local pipepath = vim.fn.stdpath("cache") .. "/server.pipe"
-if not vim.loop.fs_stat(pipepath) then
-  vim.fn.serverstart(pipepath)
-end
