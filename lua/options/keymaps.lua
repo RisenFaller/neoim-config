@@ -42,3 +42,6 @@ NONE_LS_FORMAT = "<leader>gf"
 
 -- neo_tree
 NEO_TREE_FILE_SYSTEM = "<leader>f"
+
+-- undotree
+UNDOTREE_TOGGLE_MENU = "<leader>u"
